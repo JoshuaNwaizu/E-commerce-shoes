@@ -1,11 +1,11 @@
-//mport "./index.css";
-import "./App.css";
+import "./index.css";
 import Navbar from "./Navbar/Navbar.jsx";
 
 function App() {
   return (
-    <div className="app">
+    <div>
       <Navbar />
+      <div className="text-yellow-400">Hello world</div>
     </div>
   );
 }

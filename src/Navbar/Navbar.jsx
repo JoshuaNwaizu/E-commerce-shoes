@@ -13,7 +13,7 @@ const Navbar = () => {
           />
         </a>
         <div className="nav-menu" id="nav-menu">
-          <ul className="nav-list">
+          <ul className="flex flex-col">
             <Navlinks text="Man" />
             <Navlinks text="Woman" />
             <Navlinks text="Popular" />
