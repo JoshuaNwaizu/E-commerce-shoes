@@ -3,8 +3,8 @@ import React from "react";
 const Navlinks = ({ text }) => {
   return (
     <>
-      <li className="nav-items">
-        <a href="" className="nav-links">
+      <li>
+        <a href="" className=" font-bodyFont">
           {text}
         </a>
       </li>
