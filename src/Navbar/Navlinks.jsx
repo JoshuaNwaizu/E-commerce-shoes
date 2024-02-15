@@ -1,10 +1,14 @@
 import React from "react";
 
-const Navlinks = ({ text }) => {
+const Navlinks = ({ text, target, handleClickNav }) => {
   return (
     <>
       <li>
-        <a href="" className=" font-bodyFont">
+        <a
+          href={target}
+          className="font-bodyFont"
+          onClick={() => handleClickNav()}
+        >
           {text}
         </a>
       </li>

@@ -7,12 +7,8 @@ import { twMerge } from "tailwind-merge";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleToggle = () => {
-    setIsOpen(true);
-  };
-
-  const handleClose = () => {
-    setIsOpen(false);
+  const handleNewToggle = () => {
+    setIsOpen((open) => !open);
   };
 
   return (
@@ -21,7 +17,7 @@ const Navbar = () => {
       className="fixed w-full top-0 left-0 z-100 bg-slate-100"
     >
       <nav
-        className="flex justify-between items-center max-w-4xl h-14 ms-6 me-6 bg-slate-100"
+        className="flex justify-between items-center max-w-5xl h-14 ms-6 me-6 bg-slate-100"
         id="nav"
       >
         <a href="" className="">
@@ -39,21 +35,33 @@ const Navbar = () => {
           id="nav-menu"
         >
           <ul className="flex flex-col gap-y-10">
-            <Navlinks text="Man" />
-            <Navlinks text="Woman" />
-            <Navlinks text="Popular" />
-            <Navlinks text="Trend" />
+            <Navlinks text="Man" handleClickNav={handleNewToggle} target="#" />
+            <Navlinks
+              text="Woman"
+              handleClickNav={handleNewToggle}
+              target="#"
+            />
+            <Navlinks
+              text="Popular"
+              handleClickNav={handleNewToggle}
+              target="#"
+            />
+            <Navlinks
+              text="Trend"
+              handleClickNav={handleNewToggle}
+              target="#"
+            />
           </ul>
           {/* CLOSE BUTTON */}
           <IoClose
-            className="flex text-2xl cursor-pointer absolute top-5 right-6"
-            onClick={() => handleClose()}
+            className="flex text-3xl cursor-pointer absolute top-5 right-6"
+            onClick={() => handleNewToggle()}
           />
         </div>
         {/* TOGGLE BUTTON */}
         <HiOutlineSquares2X2
           className="flex text-3xl cursor-pointer"
-          onClick={() => handleToggle()}
+          onClick={() => handleNewToggle()}
         />
       </nav>
     </header>
