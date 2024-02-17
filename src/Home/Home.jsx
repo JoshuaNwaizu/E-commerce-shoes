@@ -3,12 +3,13 @@ import HomeSwipers from "./HomeSwipers";
 import { RiFacebookCircleLine } from "react-icons/ri";
 import { RiTwitterXFill } from "react-icons/ri";
 import { FaInstagram } from "react-icons/fa6";
+import NewSwipe from "./Newswipe";
 
 const Home = () => {
   return (
     <main>
       <section>
-        <div className=" max-w-5xl ms-6 me-6 pt-32 pb-16 grid gap-y-8 relative">
+        <div className=" max-w-5xl ms-6 me-6 pt-24 pb-12 grid gap-y-8 relative">
           <div>
             <h2 className="font-bodyFont text-2xl font-extrabold">NIKE</h2>
             <h1 className="font-bodyFont text-5xl font-extrabold mb-4">
@@ -35,7 +36,7 @@ const Home = () => {
             <div className="h-64 w-64 bg-gradient-to-r from-slate-50 to-slate-100 rounded-full absolute inset-0 m-auto"></div>
 
             {/* Swipers */}
-            <HomeSwipers />
+            <NewSwipe />
           </div>
 
           {/* Socials */}
