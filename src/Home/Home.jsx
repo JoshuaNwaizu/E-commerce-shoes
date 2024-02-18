@@ -40,7 +40,7 @@ const Home = () => {
           </div>
 
           {/* Socials */}
-          <div className="absolute top-40 right-0 flex flex-col gap-y-7 text-xl">
+          <div className="absolute top-32 right-0 flex flex-col gap-y-7 text-xl">
             <a href="">
               <RiFacebookCircleLine className="hover:-translate-y-1 transition-all duration-300" />
             </a>

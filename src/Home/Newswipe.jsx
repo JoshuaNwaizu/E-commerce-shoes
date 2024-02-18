@@ -16,9 +16,9 @@ const NewSwipe = () => {
           dynamicBullets: true,
         }}
         modules={[Pagination]}
-        className="mySwiper ms-1 me-1"
+        className="ms-1 me-1"
       >
-        <SwiperSlide className="">
+        <SwiperSlide>
           {" "}
           <article>
             <img
@@ -29,7 +29,7 @@ const NewSwipe = () => {
           </article>
         </SwiperSlide>
 
-        <SwiperSlide className="">
+        <SwiperSlide>
           {" "}
           <article>
             <img
@@ -60,6 +60,7 @@ const NewSwipe = () => {
             />
           </article>
         </SwiperSlide>
+
         {/* <SwiperSlide>Slide 5</SwiperSlide>
         <SwiperSlide>Slide 6</SwiperSlide>
         <SwiperSlide>Slide 7</SwiperSlide>
