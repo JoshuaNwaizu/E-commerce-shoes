@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <main>
       <section>
-        <div className=" max-w-5xl ms-6 me-6 pt-24 pb-12 grid gap-y-8 relative">
+        <div className=" max-w-5xl ms-6 me-6 pt-24 pb-20 grid gap-y-8 relative">
           <div>
             <h2 className="font-bodyFont text-2xl font-extrabold">NIKE</h2>
             <h1 className="font-bodyFont text-5xl font-extrabold mb-4">
@@ -31,9 +31,9 @@ const Home = () => {
             </a>
           </div>
 
-          <div className="grid relative">
+          <div className="grid relative h-full mb-8">
             {/* circle */}
-            <div className="h-64 w-64 bg-gradient-to-r from-slate-50 to-slate-100 rounded-full absolute inset-0 m-auto"></div>
+            <div className="h-60 w-60 bg-gradient-to-r from-slate-50 to-slate-100 rounded-full absolute inset-0 m-auto"></div>
 
             {/* Swipers */}
             <NewSwipe />

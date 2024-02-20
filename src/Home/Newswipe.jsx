@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
 import { Pagination } from "swiper/modules";
 
 const NewSwipe = () => {
@@ -14,15 +13,20 @@ const NewSwipe = () => {
       <Swiper
         pagination={{
           dynamicBullets: true,
+          clickable: true,
         }}
+        loop={true}
         modules={[Pagination]}
         className="ms-1 me-1"
+        spaceBetween="32"
+        effect="fade"
+        crossFade={true}
       >
-        <SwiperSlide>
+        <SwiperSlide className="">
           {" "}
           <article>
             <img
-              className="w-full ms-auto me-auto"
+              className="h-full ms-auto me-auto ease-out"
               src="src/assets/nike3.png"
               alt="Nike Collection"
             />
@@ -33,7 +37,7 @@ const NewSwipe = () => {
           {" "}
           <article>
             <img
-              className="w-full ms-auto me-auto"
+              className="h-full ms-auto me-auto"
               src="src/assets/nike1.png"
               alt="Nike Collection"
             />
