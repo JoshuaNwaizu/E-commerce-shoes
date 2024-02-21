@@ -15,7 +15,7 @@ const NewSwipe = () => {
           dynamicBullets: true,
           clickable: true,
         }}
-        loop={true}
+        // loop={true}
         modules={[Pagination]}
         className="ms-1 me-1"
         spaceBetween="32"
