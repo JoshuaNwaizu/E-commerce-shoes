@@ -87,10 +87,10 @@ p {
   opacity: 1;
   transition:
     background-color 0.3s,
-    width 0.3s;
+    width 0.7s;
 }
 
 .swiper-pagination-bullet-active {
   background-color: var(--black-color);
-  width: 1.25rem;
+  width: 1.35rem;
 }

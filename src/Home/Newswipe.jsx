@@ -15,18 +15,16 @@ const NewSwipe = () => {
           dynamicBullets: true,
           clickable: true,
         }}
-        // loop={true}
+        loop={false}
         modules={[Pagination]}
         className="ms-1 me-1"
         spaceBetween="32"
-        effect="fade"
-        crossFade={true}
       >
         <SwiperSlide className="">
           {" "}
           <article>
             <img
-              className="h-full ms-auto me-auto ease-out"
+              className="h-full ms-auto me-auto"
               src="src/assets/nike3.png"
               alt="Nike Collection"
             />
