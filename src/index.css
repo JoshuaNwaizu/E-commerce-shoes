@@ -70,13 +70,27 @@ p {
   margin-inline: var(--mb-1-5);
 }
 
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-inline: initial;
+  background-color: transparent;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 /* FOR THE SWIPERS SINCE I CAN'T USE TAILWIND TO STYLE IT 😪 */
 .swiper-pagination {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-30%);
+  position: relative;
+  right: 0;
+  transform: translateY(-100%);
+  transform: translateX(37%);
   display: flex;
   list-style: none;
+  transition: 0.3s;
 }
 
 .swiper-pagination-bullet {
@@ -87,10 +101,10 @@ p {
   opacity: 1;
   transition:
     background-color 0.3s,
-    width 0.7s;
+    width 0.3s;
 }
 
 .swiper-pagination-bullet-active {
   background-color: var(--black-color);
-  width: 1.35rem;
+  width: 1.55rem;
 }

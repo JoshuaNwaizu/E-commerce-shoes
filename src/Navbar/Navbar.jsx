@@ -17,19 +17,19 @@ const Navbar = () => {
       className="fixed w-full top-0 left-0 z-100 bg-slate-100"
     >
       <nav
-        className="flex justify-between items-center max-w-5xl h-14 ms-6 me-6 bg-slate-100"
+        className="flex justify-between items-center max-w-5xl h-14 ms-6 me-6 bg-slate-100 "
         id="nav"
       >
         <a href="" className="">
           <img
-            src="src/assets/nike-logo-removebg-preview.png"
+            src="/nike-logo-removebg-preview.png"
             alt="Nav logo nike"
             className="block h-16"
           />
         </a>
         <div
           className={twMerge(
-            "fixed top-0 -right-full flex flex-row bg-slate-100 shadow-3xl h-full w-10/12 py-24 px-12 transition-all duration-300",
+            "fixed top-0 -right-full flex flex-row bg-slate-100 shadow-3xl h-full w-10/12 py-24 px-12 transition-all duration-300 min-[576px]:w-3/5",
             isOpen && "right-0 transition-all duration-500",
           )}
           id="nav-menu"
