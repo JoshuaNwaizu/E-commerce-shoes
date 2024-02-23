@@ -42,7 +42,7 @@ const Home = () => {
           </div>
 
           {/* Socials */}
-          <div className=" max-[320px]:top-28 absolute top-32 right-0 flex flex-col gap-y-7 text-xl">
+          <div className=" max-[320px]:top-28 absolute top-32 right-0 flex flex-col gap-y-7 text-xl min-[576px]:text-3xl min-[321px]:text-2xl">
             <a href="">
               <RiFacebookCircleLine className="hover:-translate-y-1 transition-all duration-300" />
             </a>

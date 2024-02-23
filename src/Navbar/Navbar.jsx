@@ -17,7 +17,7 @@ const Navbar = () => {
       className="fixed w-full top-0 left-0 z-100 bg-slate-100"
     >
       <nav
-        className="flex justify-between items-center max-w-5xl h-14 ms-6 me-6 bg-slate-100 "
+        className=" flex justify-between items-center max-w-5xl h-14 ms-6 me-6 bg-slate-100 max-[1023px]:h-20 "
         id="nav"
       >
         <a href="" className="">
@@ -29,12 +29,12 @@ const Navbar = () => {
         </a>
         <div
           className={twMerge(
-            "fixed top-0 -right-full flex flex-row bg-slate-100 shadow-3xl h-full w-10/12 py-24 px-12 transition-all duration-300 min-[576px]:w-3/5",
+            "max-[1023px]:fixed max-[1023px]:top-0 max-[1023px]:-right-full max-[1023px]:flex max-[1023px]:flex-row max-[1023px]:bg-slate-100 max-[1023px]:shadow-3xl max-[1023px]:h-full max-[1023px]:w-10/12 max-[1023px]:py-24 max-[1023px]:px-12 max-[1023px]:transition-all max-[1023px]:duration-300 min-[576px]:w-3/5 min-[1023px]:w-auto",
             isOpen && "right-0 transition-all duration-500",
           )}
           id="nav-menu"
         >
-          <ul className="flex flex-col gap-y-10">
+          <ul className="flex max-[1023px]:flex-col max-[1023px]:gap-y-10 min-[1023px]:flex-row min-[1023px]:gap-x-16">
             <Navlinks text="Man" handleClickNav={handleNewToggle} target="#" />
             <Navlinks
               text="Woman"
@@ -54,13 +54,13 @@ const Navbar = () => {
           </ul>
           {/* CLOSE BUTTON */}
           <IoClose
-            className="flex text-3xl cursor-pointer absolute top-5 right-6"
+            className="max-[1023px]:flex max-[1023px]:text-3xl max-[1023px]:cursor-pointer max-[1023px]:absolute max-[1023px]:top-5 max-[1023px]:right-6 min-[1023px]:hidden"
             onClick={() => handleNewToggle()}
           />
         </div>
         {/* TOGGLE BUTTON */}
         <HiOutlineSquares2X2
-          className="flex text-3xl cursor-pointer"
+          className="max-[1023px]:flex max-[1023px]:text-3xl max-[1023px]:cursor-pointer min-[1023px]:hidden"
           onClick={() => handleNewToggle()}
         />
       </nav>
