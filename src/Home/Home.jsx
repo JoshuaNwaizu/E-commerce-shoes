@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <main>
       <section>
-        <div className=" max-[320px]:ms-4 max-[320px]:me-4 max-w-5xl ms-6 me-6 pt-24 pb-20 grid gap-y-8 relative min-[576px]:grid-cols-[350px] min-[576px]:justify-center min-[1023px]:grid-cols-2 min-[1023px]:h-screen place-items-center min-[1023px]: gap-x-8">
+        <div className=" max-[320px]:ms-4 max-[320px]:me-4 max-w-5xl ms-6 me-6 pt-24 pb-20 grid gap-y-8 relative min-[576px]:grid-cols-[350px] min-[576px]:justify-center min-[1023px]:grid-cols-2 min-[1023px]:h-screen place-items-center min-[1023px]:gap-x-8">
           <div className="min-[576px]:text-center">
             <h2 className="max-[320px]:text-xl font-bodyFont text-2xl font-extrabold">
               NIKE
