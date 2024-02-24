@@ -1,8 +1,7 @@
 import React from "react";
-import HomeSwipers from "./HomeSwipers";
-import { RiFacebookCircleLine } from "react-icons/ri";
 import { RiTwitterXFill } from "react-icons/ri";
 import { FaInstagram } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa";
 import NewSwipe from "./Newswipe";
 
 const Home = () => {
@@ -43,8 +42,11 @@ const Home = () => {
 
           {/* Socials */}
           <div className=" max-[320px]:top-28 absolute top-32 right-0 flex flex-col gap-y-7 text-xl min-[576px]:text-3xl min-[321px]:text-2xl">
-            <a href="">
-              <RiFacebookCircleLine className="hover:-translate-y-1 transition-all duration-300" />
+            <a
+              href="https://wa.me/+2347046293449?text=Hey%2C%20I%27m%20Jns%21%20How%20may%20I%20help%20you%20today%3F
+"
+            >
+              <FaWhatsapp className="hover:-translate-y-1 transition-all duration-300" />
             </a>
             <a href="">
               <RiTwitterXFill className="hover:-translate-y-1 transition-all duration-300" />
