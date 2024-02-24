@@ -17,7 +17,7 @@ const Navbar = () => {
       className="fixed w-full top-0 left-0 z-100 bg-slate-100"
     >
       <nav
-        className=" flex justify-between items-center max-w-5xl h-14 ms-6 me-6 bg-slate-100 max-[1023px]:h-20 "
+        className=" flex justify-between items-center max-w-5xl h-14 ms-6 me-6 bg-slate-100 min-[1024px]:h-20 "
         id="nav"
       >
         <a href="" className="">
