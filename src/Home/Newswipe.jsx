@@ -8,7 +8,7 @@ import 'swiper/css/effect-creative'
 import 'swiper/css/pagination'
 import { Pagination, EffectCreative } from 'swiper/modules'
 
-import '../index.css'
+import './styles.css'
 const NewSwipe = () => {
     return (
         <>

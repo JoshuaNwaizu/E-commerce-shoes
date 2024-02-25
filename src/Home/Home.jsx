@@ -35,7 +35,7 @@ const Home = () => {
 
                     <div className="grid relative h-full mb-8">
                         {/* circle */}
-                        <div className=" max-[320px]:h-48 max-[320px]:w-48 h-60 w-60 bg-gradient-to-r from-slate-50 to-slate-100 rounded-full absolute inset-0 m-auto"></div>
+                        <div className=" max-[320px]:h-48 max-[320px]:w-48 h-60 w-60 bg-gradient-to-r from-slate-50 to-slate-50 rounded-full absolute inset-0 m-auto"></div>
 
                         {/* Swipers */}
                         <NewSwipe />

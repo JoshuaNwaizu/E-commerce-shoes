@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /*HEADER HEIGHT*/
+
+    /*=============== COLORS ===============*/
+    /* Color mode HSL(hue, saturation, lightness)*/
+    --black-color: hsl(0, 0%, 5%);
+    --black-color-light: hsl(0, 0%, 70%);
+    --button-color-alt: hsl(0, 0%, 21%);
+    --white-color: hsl(0, 0%, 100%);
+    --title-color: hsl(0, 0%, 5%);
+    --text-color: hsl(0, 0%, 55%);
+    --body-color: hsl(0, 0%, 96%);
+    --container-color: #fff;
+    --border-color: hsl(0, 0%, 94%);
+    --box-shadow: 0 10px 4px hsla(0, 4%, 15%, 0.1);
+
+    /*=============== Font type and typography ===============*/
+    --body-font: 'Roboto', sans-serif;
+    --second-body-font: 'Syncopate', sans-serif;
+}
+
+/* BASE */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--title-color);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+nav {
+    background-color: var(--body-color);
+}
+p {
+    color: var(--text-color);
+}
+/* Reusable CSS classes */
+.container {
+    max-width: 1024px;
+    margin-inline: var(--mb-1-5);
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    margin-inline: initial;
+    background-color: transparent;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/* FOR THE SWIPERS SINCE I CAN'T USE TAILWIND TO STYLE IT 😪 */
+.swiper-pagination {
+    position: relative;
+    right: 0;
+    transform: translateY(-100%);
+    transform: translateX(37%);
+    display: flex;
+    list-style: none;
+    transition: 0.3s;
+}
+
+.swiper-pagination-bullet {
+    width: 1rem;
+    height: 0.25rem;
+    background-color: var(--black-color-light);
+    border-radius: 1rem;
+    opacity: 1;
+    transition:
+        background-color 0.3s,
+        width 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--black-color);
+    width: 1.55rem;
+} /* 
+@media screen and (min-width: 1024px) {
+  .swiper-pagination {
+    position: relative;
+    right: 0;
+    transform: translateY(100%);
+    transform: translateX(3%);
+    display: flex;
+    list-style: none;
+    transition: 0.3s;
+  }
+} */
