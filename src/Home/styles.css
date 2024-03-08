@@ -24,46 +24,6 @@
     --second-body-font: 'Syncopate', sans-serif;
 }
 
-/* BASE */
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-body {
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-    background-color: var(--body-color);
-    color: var(--title-color);
-}
-
-ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-    height: auto;
-}
-
-button {
-    cursor: pointer;
-    border: none;
-    outline: none;
-}
-
-nav {
-    background-color: var(--body-color);
-}
-p {
-    color: var(--text-color);
-}
 /* Reusable CSS classes */
 .container {
     max-width: 1024px;
@@ -107,15 +67,15 @@ p {
 .swiper-pagination-bullet-active {
     background-color: var(--black-color);
     width: 1.55rem;
-} /* 
+}
 @media screen and (min-width: 1024px) {
-  .swiper-pagination {
-    position: relative;
-    right: 0;
-    transform: translateY(100%);
-    transform: translateX(3%);
-    display: flex;
-    list-style: none;
-    transition: 0.3s;
-  }
-} */
+    .swiper-pagination {
+        position: relative;
+        right: 0;
+        transform: translateY(100%);
+        transform: translateX(3%);
+        display: flex;
+        list-style: none;
+        transition: 0.3s;
+    }
+}
