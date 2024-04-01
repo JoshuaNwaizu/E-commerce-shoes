@@ -29,7 +29,7 @@ const Navbar = () => {
                 </a>
                 <div
                     className={twMerge(
-                        'max-[1023px]:fixed max-[1023px]:top-0 max-[1023px]:-right-full max-[1023px]:flex max-[1023px]:flex-row max-[1023px]:bg-slate-100 max-[1023px]:shadow-3xl max-[1023px]:h-full max-[1023px]:w-10/12 max-[1023px]:py-24 max-[1023px]:px-12 max-[1023px]:transition-all max-[1023px]:duration-300 min-[576px]:w-3/5 min-[1024px]:w-auto',
+                        'max-[1023px]:fixed max-[1023px]:top-0 max-[1023px]:-right-full max-[1023px]:flex max-[1023px]:flex-row max-[1023px]:bg-slate-100 max-[1023px]:shadow-3xl max-[1023px]:h-full max-[1023px]:w-10/12 max-[1023px]:py-24 max-[1023px]:px-12 max-[1023px]:transition-all max-[1023px]:duration-300 min-[576px]:w-3/5 min-[1024px]:w-auto min-[884px]:w-[40%] min-[884px]:text-2xl',
                         isOpen &&
                             'max-[1023px]:right-0 max-[1023px]:transition-all max-[1023px]:duration-500'
                     )}
