@@ -27,6 +27,19 @@ function App() {
     changedArrays('Joshua is a good dev', lowerOneWord)
     changedArrays('Joshua is a good dev', mulNum)
 
+    // function scope
+    let f
+
+    const g = () => {
+        let a = 34
+
+        f = () => {
+            console.log(a * 2)
+        }
+    }
+    g()
+    f()
+
     return (
         <div>
             <Navbar />
