@@ -16,8 +16,8 @@ function App() {
     }
     //Function that calls other functions
     function changedArrays(str, fn) {
-        console.log(`Transfromed string: ${fn(str)}`)
-        console.log(`Transformes by: ${fn.name}`)
+        // console.log(`Transfromed string: ${fn(str)}`)
+        // console.log(`Transformes by: ${fn.name}`)
     }
     const mulNum = (str) => {
         return str.split(' ').join(' /') + ' ' + 5
@@ -34,12 +34,41 @@ function App() {
         let a = 34
 
         f = () => {
-            console.log(a * 2)
+            // console.log(a * 2)
         }
     }
     g()
     f()
 
+    fetch(`https://restcountries.com/v3.1/name/nigeria`)
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data[0])
+            const border = data[0].borders[0]
+
+            return fetch(`https://restcountries.com/v3.1/alpha/${border}`)
+        })
+        .then((res) => res.json())
+        .then((borderData) => {
+            console.log(borderData[0])
+
+            const border2 = borderData[0].borders[3]
+            return fetch(`https://restcountries.com/v3.1/alpha/${border2}`)
+        })
+        .then((res) => res.json())
+        .then((border2Data) => {
+            console.log(border2Data[0])
+
+            const border3 = border2Data[0].borders[2]
+            return fetch(`https://restcountries.com/v3.1/alpha/${border3}`)
+        })
+        .then((res) => res.json())
+        .then((border3Data) => {
+            console.log(border3Data[0])
+        })
+        .catch((err) => {
+            console.error(`Hey Joshua this page ${err.message}😪`)
+        })
     return (
         <div>
             <Navbar />
