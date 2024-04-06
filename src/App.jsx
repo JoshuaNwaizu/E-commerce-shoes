@@ -40,6 +40,14 @@ function App() {
     g()
     f()
 
+    const getJson = (url, errMsg = `This can't be found`) => {
+        fetch(url).then((res) => {
+            if (!res.ok) throw new Error("This can't be found")
+
+            return res.json()
+        })
+    }
+
     fetch(`https://restcountries.com/v3.1/name/nigeria`)
         .then((res) => res.json())
         .then((data) => {
@@ -51,21 +59,8 @@ function App() {
         .then((res) => res.json())
         .then((borderData) => {
             console.log(borderData[0])
+        })
 
-            const border2 = borderData[0].borders[3]
-            return fetch(`https://restcountries.com/v3.1/alpha/${border2}`)
-        })
-        .then((res) => res.json())
-        .then((border2Data) => {
-            console.log(border2Data[0])
-
-            const border3 = border2Data[0].borders[2]
-            return fetch(`https://restcountries.com/v3.1/alpha/${border3}`)
-        })
-        .then((res) => res.json())
-        .then((border3Data) => {
-            console.log(border3Data[0])
-        })
         .catch((err) => {
             console.error(`Hey Joshua this page ${err.message}😪`)
         })
