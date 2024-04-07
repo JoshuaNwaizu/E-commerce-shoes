@@ -78,7 +78,7 @@ function App() {
                 console.error(`There's an error somewhere:  ${err.message}😪`)
             })
     }
-    getCountries('usa')
+    getCountries('califonia')
 
     return (
         <div>
