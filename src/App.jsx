@@ -41,29 +41,45 @@ function App() {
     f()
 
     const getJson = (url, errMsg = `This can't be found`) => {
-        fetch(url).then((res) => {
-            if (!res.ok) throw new Error("This can't be found")
+        return fetch(url).then((res) => {
+            if (!res.ok) throw new Error(errMsg)
+            console.log(res)
 
             return res.json()
         })
     }
 
-    fetch(`https://restcountries.com/v3.1/name/nigeria`)
-        .then((res) => res.json())
-        .then((data) => {
-            console.log(data[0])
-            const border = data[0].borders[0]
+    const getCountries = (country) => {
+        getJson(`https://restcountries.com/v3.1/name/${country}`)
+            .then((data) => {
+                console.log(data[0])
+                const border = data[0].borders[0]
 
-            return fetch(`https://restcountries.com/v3.1/alpha/${border}`)
-        })
-        .then((res) => res.json())
-        .then((borderData) => {
-            console.log(borderData[0])
-        })
+                if (!border) throw new Error('No border 1')
 
-        .catch((err) => {
-            console.error(`Hey Joshua this page ${err.message}😪`)
-        })
+                return getJson(`https://restcountries.com/v3.1/alpha/${border}`)
+            })
+            .then((borderData) => {
+                console.log(borderData[0])
+
+                const border2 = borderData[0].borders[0]
+                if (!border2) throw new Error('No border 2')
+
+                return getJson(
+                    `https://restcountries.com/v3.1/alpha/${border2}`,
+                    `Sorry can't get data from ${border2}`
+                )
+            })
+            .then((border2Data) => {
+                console.log(border2Data[0])
+            })
+
+            .catch((err) => {
+                console.error(`There's an error somewhere:  ${err.message}😪`)
+            })
+    }
+    getCountries('usa')
+
     return (
         <div>
             <Navbar />
