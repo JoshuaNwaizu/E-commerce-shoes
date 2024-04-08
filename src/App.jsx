@@ -40,7 +40,7 @@ function App() {
     g()
     f()
 
-    const getJson = (url, errMsg = `This can't be found`) => {
+    const getJsons = (url, errMsg = `This can't be found`) => {
         return fetch(url).then((res) => {
             if (!res.ok) throw new Error(errMsg)
             console.log(res)
@@ -48,24 +48,22 @@ function App() {
             return res.json()
         })
     }
-
     const getCountries = (country) => {
-        getJson(`https://restcountries.com/v3.1/name/${country}`)
+        getJsons(`https://restcountries.com/v3.1/name/${country}`)
             .then((data) => {
                 console.log(data[0])
                 const border = data[0].borders[0]
 
-                if (!border) throw new Error('No border 1')
-
-                return getJson(`https://restcountries.com/v3.1/alpha/${border}`)
+                return getJsons(
+                    `https://restcountries.com/v3.1/alpha/${border}`
+                )
             })
             .then((borderData) => {
                 console.log(borderData[0])
 
                 const border2 = borderData[0].borders[0]
-                if (!border2) throw new Error('No border 2')
 
-                return getJson(
+                return getJsons(
                     `https://restcountries.com/v3.1/alpha/${border2}`,
                     `Sorry can't get data from ${border2}`
                 )
@@ -78,7 +76,7 @@ function App() {
                 console.error(`There's an error somewhere:  ${err.message}😪`)
             })
     }
-    getCountries('califonia')
+    getCountries('nigeria')
 
     return (
         <div>
