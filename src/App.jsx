@@ -78,6 +78,13 @@ function App() {
     }
     getCountries('nigeria')
 
+    const getLocation = () => {
+        return new Promise((resolve, reject) => {
+            navigator.geolocation.getCurrentPosition(resolve, reject)
+        })
+    }
+
+    getLocation().then((pos) => console.log(pos))
     return (
         <div>
             <Navbar />
