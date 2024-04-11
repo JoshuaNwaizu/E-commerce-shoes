@@ -112,18 +112,18 @@ function App() {
 
     const get3Countries = async (c1, c2, c3, c4) => {
         try {
-            const [data1] = await getJson(
-                `https://restcountries.com/v3.1/name/${c1}`
-            )
-            const [data2] = await getJson(
-                `https://restcountries.com/v3.1/name/${c2}`
-            )
-            const [data3] = await getJson(
-                `https://restcountries.com/v3.1/name/${c3}`
-            )
-            const [data4] = await getJson(
-                `https://restcountries.com/v3.1/name/${c4}`
-            )
+            // const [data1] = await getJson(
+            //     `https://restcountries.com/v3.1/name/${c1}`
+            // )
+            // const [data2] = await getJson(
+            //     `https://restcountries.com/v3.1/name/${c2}`
+            // )
+            // const [data3] = await getJson(
+            //     `https://restcountries.com/v3.1/name/${c3}`
+            // )
+            // const [data4] = await getJson(
+            //     `https://restcountries.com/v3.1/name/${c4}`
+            // )
 
             const data = await Promise.all([
                 getJson(`https://restcountries.com/v3.1/name/${c1}`),
@@ -132,19 +132,13 @@ function App() {
                 getJson(`https://restcountries.com/v3.1/name/${c4}`),
             ])
 
-            console.log([
-                data1.borders[0],
-                data2.borders[0],
-                data3.borders[0],
-                data4.borders[0],
-                data4,
-            ])
+            console.log([data])
             console.log(data)
         } catch (err) {
             console.error(err)
         }
     }
-    get3Countries('nigeria', 'benin', 'niger', 'nigeria')
+    get3Countries('nigeria', 'benin', 'niger', 'usa')
     return (
         <div>
             <Navbar />
