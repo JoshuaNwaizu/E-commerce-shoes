@@ -138,7 +138,7 @@ function App() {
             console.error(err)
         }
     }
-    get3Countries('nigeria', 'benin', 'niger', 'usa')
+    get3Countries('nigeria', 'benin', 'niger', 'togo')
     return (
         <div>
             <Navbar />
