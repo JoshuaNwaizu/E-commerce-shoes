@@ -112,9 +112,9 @@ function App() {
 
     const get3Countries = async (c1, c2, c3, c4) => {
         try {
-            // const [data1] = await getJson(
-            //     `https://restcountries.com/v3.1/name/${c1}`
-            // )
+            const [data1] = await getJson(
+                `https://restcountries.com/v3.1/name/${c1}`
+            )
             // const [data2] = await getJson(
             //     `https://restcountries.com/v3.1/name/${c2}`
             // )
