@@ -73,34 +73,34 @@ function App() {
 
     getLocation().then((pos) => console.log(pos))
 
-    // const getCountries = async (country) => {
-    //     try {
-    //         const getUrl = await fetch(
-    //             `https://restcountries.com/v3.1/name/${country}`
-    //         )
+    const getCountries = async (country) => {
+        try {
+            const getUrl = await fetch(
+                `https://restcountries.com/v3.1/name/${country}`
+            )
 
-    //         if (!getUrl.ok)
-    //             throw new Error(`Sorry can't get countries at this point`)
-    //         // console.log(getUrl)
-    //         const newUrl = await getUrl.json()
-    //         console.log(newUrl[0])
+            if (!getUrl.ok)
+                throw new Error(`Sorry can't get countries at this point`)
+            // console.log(getUrl)
+            const newUrl = await getUrl.json()
+            console.log(newUrl[0])
 
-    //         const border = newUrl[0].borders[0]
+            const border = newUrl[0].borders[0]
 
-    //         const border1URl = await fetch(
-    //             `https://restcountries.com/v3.1/alpha/${border}`
-    //         )
-    //         if (!border1URl.ok)
-    //             throw new Error(`Sorry can't get this border at this point`)
+            const border1URl = await fetch(
+                `https://restcountries.com/v3.1/alpha/${border}`
+            )
+            if (!border1URl.ok)
+                throw new Error(`Sorry can't get this border at this point`)
 
-    //         console.log(border1URl)
-    //         const newBorder1URl = await border1URl.json()
-    //         console.log(newBorder1URl[0])
-    //     } catch (err) {
-    //         console.error(`${err}💀💀💀`)
-    //     }
-    // }
-    // getCountries('nigeria')
+            console.log(border1URl)
+            const newBorder1URl = await border1URl.json()
+            console.log(newBorder1URl[0])
+        } catch (err) {
+            console.error(`${err}💀💀💀`)
+        }
+    }
+    getCountries('nigeria')
     const getJson = (url, errMsg = `This can't be found`) => {
         return fetch(url).then((res) => {
             if (!res.ok) throw new Error(errMsg)
