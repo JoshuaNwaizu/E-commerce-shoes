@@ -130,6 +130,7 @@ function App() {
                 getJson(`https://restcountries.com/v3.1/name/${c2}`),
                 getJson(`https://restcountries.com/v3.1/name/${c3}`),
                 getJson(`https://restcountries.com/v3.1/name/${c4}`),
+                getJson(`https://restcountries.com/v3.1/name/${c5}`),
             ])
 
             console.log([data])
@@ -138,7 +139,7 @@ function App() {
             console.error(err)
         }
     }
-    get3Countries('nigeria', 'benin', 'niger', 'togo')
+    get3Countries('nigeria', 'benin', 'niger', 'togo', 'iran')
     return (
         <div>
             <Navbar />
