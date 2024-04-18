@@ -83,7 +83,7 @@ function App() {
                 throw new Error(`Sorry can't get countries at this point`)
             // console.log(getUrl)
             const newUrl = await getUrl.json()
-            console.log(newUrl[0])
+            // console.log(newUrl[0])
 
             const border = newUrl[0].borders[0]
 
@@ -93,18 +93,18 @@ function App() {
             if (!border1URl.ok)
                 throw new Error(`Sorry can't get this border at this point`)
 
-            console.log(border1URl)
+            // console.log(border1URl)
             const newBorder1URl = await border1URl.json()
-            console.log(newBorder1URl[0])
+            // console.log(newBorder1URl[0])
         } catch (err) {
-            console.error(`${err}💀💀💀`)
+            // console.error(`${err}💀💀💀`)
         }
     }
     getCountries('nigeria')
     const getJson = (url, errMsg = `This can't be found`) => {
         return fetch(url).then((res) => {
             if (!res.ok) throw new Error(errMsg)
-            console.log(res)
+            // console.log(res)
 
             return res.json()
         })
@@ -133,13 +133,32 @@ function App() {
                 getJson(`https://restcountries.com/v3.1/name/${c5}`),
             ])
 
-            console.log([data])
-            console.log(data)
+            // console.log([data])
+            // console.log(data)
         } catch (err) {
-            console.error(err)
+            // console.error(err)
         }
     }
     get3Countries('nigeria', 'benin', 'niger', 'togo', 'iran')
+
+    const shortnerApi = async (url) => {
+        try {
+            const res = await fetch(
+                `https://tinyurl.com/api-create.php?url=${url}`
+            )
+            if (!res.ok) throw new Error('Cant get link')
+
+            const data = await res.text()
+            console.log(data)
+            return data
+        } catch (err) {
+            console.error(`Error shortening url:`, error)
+        }
+    }
+
+    shortnerApi(
+        'https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G'
+    )
     return (
         <div>
             <Navbar />
