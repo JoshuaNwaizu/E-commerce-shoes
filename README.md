@@ -4,4 +4,4 @@ This project is a vibrant and user-friendly Shoe Store website built with React.
 
 # Stylings
 
-Tailwind CSS
+Tailwind CSS and CSS 
